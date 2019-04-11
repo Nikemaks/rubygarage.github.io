@@ -1,0 +1,391 @@
+body
+ font-family: 'Arial', sans-serif, serif 
+ font-size: 10px
+input, button
+ cursor: pointer
+ &:focus
+  outline: none
+ &:active
+  outline: none
+.header
+ display: flex
+ justify-content: flex-end 
+ align-items: center
+ height: 100px
+ font-size: 16px
+ &-info
+  display: flex
+  flex-direction: column
+  font-size: 16px
+  margin-right: 15px
+  p
+   font-weight: bold
+  a 
+   text-decoration: none
+   background: #3a609e
+   padding: 10px
+   border-radius: 10px
+   text-align: center
+   color: #fff
+   margin: 5px 0
+   transition: 0.3s all
+   box-shadow: 1px 5px 5px rgba(0,0,0,.7)
+   &:hover
+    box-shadow: 1px 0px 5px rgba(0,0,0,.7)
+  p 
+   margin: 0
+   padding: 0 
+ &-button
+  button
+   border: none
+   width: 146px
+   height: 36px 
+   cursor: pointer
+   margin-right: 10px
+   background: #3a609e
+   color: #fff
+   font-size: 1.2em
+   transition: 0.3s all
+   box-shadow: 1px 5px 5px rgba(0,0,0,.7)
+   &:hover
+    box-shadow: 1px 0px 5px rgba(0,0,0,.7)
+
+
+.container
+ display: flex
+ flex-direction: column
+ align-items: center
+ justify-content: center
+ padding: 0 15px
+ max-width: 100% 
+ h1 
+  font-size: 2.4em
+  text-align: center
+  text-transform: uppercase
+.todolist
+ width: 60%
+ box-shadow: 1px 5px 5px rgba(0,0,0, 0.7)
+ border-radius: 0 0 20px 20px
+ margin: 20px 0
+ &-header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  background: linear-gradient(#4D7CBF, #3A59A0)
+  padding: 0 15px
+  height: 52px
+  &:hover
+   .todolist-header__right
+    opacity: 1
+
+  &__right, &__left, &__left-Create, &__right-Create
+   display: flex
+   align-items: center
+  &__left
+   h2 
+    color: #F9FAFB
+    padding-left: 10px 
+  &__right
+   position: relative
+   cursor: pointer
+   opacity: 0
+   transition: 0.3s all
+   &-Create
+    button
+     width: 110px
+     height: 26px
+     font-size: 1.2em
+     background: linear-gradient(#89bfa2,#518868)
+     border: none
+     color: #fff
+     cursor: pointer
+   &-title
+    input 
+     width: 70vh
+     background: transparent
+     border: none
+     color: #fff
+     font-size: 1.1em
+     padding: 5px
+    &__Create
+     padding-left: 10px
+     input 
+      width: 64vh
+      color: grey
+      font-size: 1.1em 
+   &::after
+    content: '' 
+    display: block
+    height: 16px
+    width: 1px
+    background: rgb(255,255,255)
+    position: absolute
+    opacity: 0.6 
+    left: 50%
+   svg 
+    cursor: pointer  
+ &-addTask
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px
+  background: #CECECE
+  svg
+   cursor: pointer
+  &_groupButton
+   display: flex
+   font-size: 1.4em
+   width: 93%
+   height: 32px
+   input[type="text"]
+   	width: 80%
+   	padding-left: 10px
+    box-shadow: inset 0 1px 1px rgba(0,0,0, 0.4)
+   input[type="submit"]
+    width: 17%
+    background: linear-gradient(#89BFA2, #518868)	
+    border: none
+    color: #fff
+    cursor: pointer
+    border-radius: 0 5px 5px 0
+    box-shadow: inset 0 1px 5px rgba(0,0,0, 0.6)
+ &-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: #fff
+  width: 100%
+  border-radius: 0 0 20px 20px
+  &__elem
+   display: flex
+   justify-content: space-between
+   align-items: center  
+   width: 100%
+   height: 46px
+   transition: 0.3s all
+   cursor: pointer
+   border-top: 1px solid #EEF1F0
+   &:hover
+    .todolist-content__elem-tools
+     opacity: 1
+   &-tools 
+   	height: 100%
+   	width: 15%
+   	display: flex
+   	align-items: center
+   	justify-content: space-around
+   	position: relative
+   	opacity: 0
+   	transition: 0.3s all
+   	&::after
+   	 content: '' 
+   	 display: block
+   	 height: 16px
+   	 width: 1px
+   	 background: grey
+   	 position: absolute
+   	 opacity: 0.6 
+   	 left: 33.3%
+   	&::before
+   	 content: '' 
+   	 display: block
+   	 height: 16px
+   	 width: 1px
+   	 background: grey
+   	 position: absolute
+   	 opacity: 0.6 
+   	 right: 33.3% 
+   &-check
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 6%
+    height: 100%
+    border-right: 1px solid #EEF1F0
+    cursor: pointer
+   input 
+    width: 16px
+    height: 16px 
+   &:hover
+    background: #FCFED5
+   &-text
+    display: flex
+    align-items: center
+    width: 75%
+    height: 100%
+    border-left: 1px solid #EEF1F0
+    border-right: 1px solid #EEF1F0
+    input
+     width: 100%
+     border: none
+     background: transparent
+     font-size: 1.2em
+     padding-left: 10px
+     cursor: pointer
+
+.eddit-input
+ background: #fff!important
+ color: grey!important
+ border: 1px solid grey!important
+.todolist-edit
+ padding-right: 10px
+.save-icons
+ display: flex
+ position: absolute
+ justify-content: space-between
+ width: 100%
+ opacity: 0
+ z-index: -1
+ transition: 0.3s all
+ &__task
+  display: flex
+  position: absolute
+  justify-content: space-between
+  width: 80%
+  opacity: 0
+  z-index: -1
+  transition: 0.3s all
+.addTodoList
+ margin: 50px auto
+ width: 196px
+ height: 46px
+ background: #3A609E
+ color: #fff
+ border: none
+ font-size: 1.6em
+ font-weight: bold
+ cursor: pointer
+ background-image: url('../img/add2.png')
+ background-repeat: no-repeat
+ background-position: 5% 50%
+ box-shadow: 1px 5px 5px rgba(0,0,0, 0.7)
+ transition: 0.3s all
+ &:hover
+  box-shadow: -1px 0 0 rgba(0,0,0, 0.6)
+.done-task
+  position: relative
+  &:before 
+   content: ''
+   width: 100%
+   height: 1px
+   background: grey
+   position: absolute
+   top: 50%		
+.defoult-Tools
+ display: flex
+ flex-direction: row
+ width: 100%
+ justify-content: space-around   
+
+#overlay 
+ display: flex
+ justify-content: center
+ align-items: center
+ width: 100%
+ height: 100vh
+ position: fixed
+ top: 0
+ left: 0
+ background: rgba(0,0,0, 0.6)
+ transition: 0.3s all
+ z-index: -1
+.modal
+ display: flex
+ flex-direction: column
+ justify-content: space-around
+ align-items: center
+ position: fixed
+ background: #fff
+ box-shadow: 1px 5px 5px rgba(0,0,0,.7)
+ width: 40vh
+ height: 200px
+ left: 50%
+ top: 50%
+ transform: translate(-50%, -50%)
+ h1 
+  font-size: 24px
+ &-btn
+  display: flex
+  justify-content: space-between
+  width: 70%
+  a 
+   background: #3a609e
+   padding: 10px
+   font-size: 14px
+   border-radius: 10px
+   text-align: center
+   color: #fff
+   margin: 5px 0
+   transition: 0.3s all
+   text-decoration: none
+   box-shadow: 1px 5px 5px rgba(0,0,0,.7)
+   &:hover
+    box-shadow: 1px 0px 5px rgba(0,0,0,.7)
+
+.form
+ display: flex
+ flex-direction: column
+ justify-content: center
+ align-items: center
+ width: 40vh
+ height: 50vh
+ margin: 0 auto
+ position: fixed
+ left: 50%
+ top: 50%
+ transform: translate(-50%, -50%)
+ box-shadow: 1px 5px 5px rgba(0,0,0,.7)
+ h1
+  font-size: 24px
+  margin: 0 0 30px
+ strong
+  font-size: 16px
+ input
+  width: 200px
+  height: 30px 
+  padding-left: 10px
+  margin: 15px 0
+  border: none
+  border-radius: 5px
+  font-size: 16px
+ button
+  width: 160px
+  height: 32px
+  font-size: 14px 
+  background: #3a609e
+  color: #fff
+  border: none
+  border-radius: 10px
+  margin-bottom: 20px
+ p 
+  margin: 0
+  font-size: 12px
+ a 
+  text-decoration: none  
+  font-size: 14px
+  margin: 10px 0 0
+
+ &-sinup
+  height: 65vh
+  input
+   border: 1px solid rgba(0,0,0, 0.6)
+ &-login
+
+#errors
+ font-size: 18px
+ position: absolute
+ left: 50%
+ top: 12%
+ transform: translateX(-50%)
+.successful-message
+  font-size: 16px
+  width: 220px
+  margin: 0 auto
+  text-align: center
+  a 
+   text-transform: uppercase
+   color: #3a609e
+   font-size: 12px
+
+
+
