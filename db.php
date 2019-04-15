@@ -1,6 +1,7 @@
 <?php 
 require 'libs/rb.php';
-R::setup( 'mysql://b7910360988363:cf43c19c@us-cdbr-iron-east-02.cleardb.net/heroku_81bf97cd4fb58e9?reconnect=true; dbname=	 heroku_81bf97cd4fb58e9','b7910360988363', 'cf43c19c'); 
+R::setup( 'mysql:127.0.0.1;dbname=users','root', '' ); 
+ 
 
 if ( !R::testconnection() )
 {
